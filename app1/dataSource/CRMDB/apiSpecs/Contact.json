@@ -1,0 +1,494 @@
+[
+  {
+    "serviceUrl" : "/ds/delete/ContactMgmt/CRMDB/Contact",
+    "method" : "delete",
+    "outputSchema" : {
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "code" : {
+          "type" : "number"
+        },
+        "_rtag" : {
+          "type" : "string"
+        },
+        "failed" : {
+          "type" : "boolean"
+        },
+        "detailMessage" : {
+          "type" : "string"
+        },
+        "success" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "querySchema" : {
+      "properties" : {
+        "permanent" : {
+          "required" : true,
+          "type" : "string"
+        },
+        "id" : {
+          "required" : true,
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "testQuery" : {
+      "id" : "2"
+    }
+  },
+  {
+    "serviceUrl" : "/ds/deleteAll/ContactMgmt/CRMDB/Contact",
+    "bodySchema" : {
+      "array" : true,
+      "type" : "string"
+    },
+    "method" : "delete",
+    "querySchema" : {
+      "properties" : {
+        "permanent" : {
+          "required" : true,
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  },
+  {
+    "serviceUrl" : "/ds/deleteByQuery/ContactMgmt/CRMDB/Contact",
+    "method" : "delete",
+    "querySchema" : {
+      "properties" : {
+        "permanent" : {
+          "required" : true,
+          "type" : "string"
+        },
+        "query" : {
+          "required" : true,
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  },
+  {
+    "serviceUrl" : "/ds/object/ContactMgmt/CRMDB/Contact",
+    "method" : "get",
+    "outputSchema" : {
+      "properties" : {
+        "createdAt" : {
+          "type" : "number"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "mobilePhone" : {
+          "type" : "string"
+        },
+        "addressZipPostalCode" : {
+          "type" : "string"
+        },
+        "fullName" : {
+          "type" : "string"
+        },
+        "addressStateProvince" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "number"
+        },
+        "updatedAt" : {
+          "type" : "number"
+        }
+      },
+      "type" : "object"
+    },
+    "querySchema" : {
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "testQuery" : {
+      "id" : "1"
+    }
+  },
+  {
+    "serviceUrl" : "/ds/objects/ContactMgmt/CRMDB/Contact",
+    "bodySchema" : {
+      "array" : true,
+      "type" : "string"
+    },
+    "method" : "post"
+  },
+  {
+    "serviceUrl" : "/ds/objectsbyquery/ContactMgmt/CRMDB/Contact",
+    "method" : "get",
+    "querySchema" : {
+      "properties" : {
+        "query" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    }
+  },
+  {
+    "serviceUrl" : "/ds/page/ContactMgmt/CRMDB/Contact",
+    "bodySchema" : {
+      "properties" : {
+        "having" : {
+          "type" : "string"
+        },
+        "size" : {
+          "type" : "integer"
+        },
+        "start" : {
+          "type" : "integer"
+        },
+        "orderBy" : {
+          "type" : "string"
+        },
+        "where" : {
+          "type" : "string"
+        },
+        "groupBy" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "method" : "post",
+    "outputSchema" : {
+      "properties" : {
+        "items" : {
+          "array" : true,
+          "properties" : {
+            "createdAt" : {
+              "type" : "number"
+            },
+            "firstName" : {
+              "type" : "string"
+            },
+            "lastName" : {
+              "type" : "string"
+            },
+            "mobilePhone" : {
+              "type" : "string"
+            },
+            "jobTitle" : {
+              "type" : "string"
+            },
+            "addressZipPostalCode" : {
+              "type" : "string"
+            },
+            "fullName" : {
+              "type" : "string"
+            },
+            "addressStateProvince" : {
+              "type" : "string"
+            },
+            "id" : {
+              "type" : "number"
+            },
+            "businessPhone" : {
+              "type" : "string"
+            },
+            "updatedAt" : {
+              "type" : "number"
+            }
+          },
+          "type" : "object"
+        },
+        "totalItems" : {
+          "type" : "number"
+        },
+        "start" : {
+          "type" : "number"
+        },
+        "_paginated_" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "testBody" : {
+      "size" : 10,
+      "start" : 1
+    }
+  },
+  {
+    "serviceUrl" : "/ds/save/ContactMgmt/CRMDB/Contact",
+    "bodySchema" : {
+      "properties" : {
+        "addressCountry" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "jobTitle" : {
+          "type" : "string"
+        },
+        "addressZipPostalCode" : {
+          "type" : "string"
+        },
+        "fullName" : {
+          "type" : "string"
+        },
+        "addressStateProvince" : {
+          "type" : "string"
+        },
+        "parentCompany" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "mobilePhone" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "addressLine1" : {
+          "type" : "string"
+        },
+        "middleName" : {
+          "type" : "string"
+        },
+        "addressLine2" : {
+          "type" : "string"
+        },
+        "addressLine3" : {
+          "type" : "string"
+        },
+        "businessPhone" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "addressCity" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "method" : "post",
+    "outputSchema" : {
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "code" : {
+          "type" : "number"
+        },
+        "_rtag" : {
+          "type" : "string"
+        },
+        "failed" : {
+          "type" : "boolean"
+        },
+        "detailMessage" : {
+          "type" : "string"
+        },
+        "success" : {
+          "type" : "boolean"
+        }
+      },
+      "type" : "object"
+    },
+    "testBody" : {
+      "lastName" : "Mohsin",
+      "jobTitle" : "VP",
+      "addressZipPostalCode" : "94549",
+      "fullName" : "Jimmy Mohsin",
+      "addressStateProvince" : "CA",
+      "parentCompany" : "Trillo",
+      "firstName" : "Jimmy",
+      "mobilePhone" : "6092165995",
+      "email" : "jimmy@trillo.io",
+      "addressCity" : "San Ramon"
+    }
+  },
+  {
+    "serviceUrl" : "/ds/saveAll/ContactMgmt/CRMDB/Contact",
+    "bodySchema" : {
+      "array" : true,
+      "properties" : {
+        "addressCountry" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "jobTitle" : {
+          "type" : "string"
+        },
+        "addressZipPostalCode" : {
+          "type" : "string"
+        },
+        "fullName" : {
+          "type" : "string"
+        },
+        "addressStateProvince" : {
+          "type" : "string"
+        },
+        "parentCompany" : {
+          "type" : "string"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "mobilePhone" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "addressLine1" : {
+          "type" : "string"
+        },
+        "middleName" : {
+          "type" : "string"
+        },
+        "addressLine2" : {
+          "type" : "string"
+        },
+        "addressLine3" : {
+          "type" : "string"
+        },
+        "businessPhone" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "addressCity" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "method" : "post"
+  },
+  {
+    "serviceUrl" : "/ds/update/ContactMgmt/CRMDB/Contact",
+    "bodySchema" : {
+      "properties" : {
+        "ids" : {
+          "array" : true,
+          "type" : "string"
+        },
+        "attrValue" : {
+          "type" : "object"
+        },
+        "attrName" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "method" : "post"
+  },
+  {
+    "serviceUrl" : "/ds/updateOne/ContactMgmt/CRMDB/Contact",
+    "bodySchema" : {
+      "properties" : {
+        "attrValue" : {
+          "type" : "object"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "attrName" : {
+          "type" : "string"
+        }
+      },
+      "type" : "object"
+    },
+    "method" : "post",
+    "outputSchema" : {
+      "array" : true,
+      "properties" : {
+        "lastName" : {
+          "type" : "string"
+        },
+        "city" : {
+          "type" : "string"
+        },
+        "jobTitle" : {
+          "type" : "string"
+        },
+        "addressZipPostalCode" : {
+          "type" : "string"
+        },
+        "fullName" : {
+          "type" : "string"
+        },
+        "addressStateProvince" : {
+          "type" : "string"
+        },
+        "createdAt" : {
+          "type" : "number"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "mobilePhone" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "number"
+        },
+        "businessPhone" : {
+          "type" : "string"
+        },
+        "updatedAt" : {
+          "type" : "number"
+        }
+      },
+      "type" : "object"
+    },
+    "testBody" : {
+      "attrValue" : "San Ramon",
+      "id" : "1",
+      "attrName" : "city"
+    }
+  },
+  {
+    "serviceUrl" : "/ds/sqltemplate/ContactMgmt/CRMDB/Contact",
+    "bodySchema" : {
+      "properties" : {
+        "sqlTemplate" : {
+          "type" : "string"
+        },
+        "size" : {
+          "type" : "integer"
+        },
+        "start" : {
+          "type" : "integer"
+        }
+      },
+      "type" : "object"
+    },
+    "method" : "post"
+  }
+]

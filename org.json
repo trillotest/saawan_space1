@@ -1,0 +1,15 @@
+{
+  "authChoice" : "1",
+  "gitConnected" : false,
+  "logos" : {
+    "logoStamp" : "/saawan_space1/shared/static/img/logo-stamp.png"
+  },
+  "name" : "saawan_space1",
+  "rtChoice" : "custom",
+  "rtServerUrlDev" : "https://gcp.trillo.io",
+  "rtServerUrlInt" : "https://rt.trillo.io",
+  "rtServerUrlProduction" : "https://rt.trillo.io",
+  "rtServerUrlQA" : "https://rt.trillo.io",
+  "rtServerUrlStaging" : "https://rt.trillo.io",
+  "rtUrl" : "https://gcp.trillo.io"
+}
